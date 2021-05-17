@@ -17,7 +17,13 @@ export class UserComponent implements OnInit {
     this.user = {
       id: this.router.snapshot.params['id'],
       name: this.router.snapshot.params['name']
-    }
+    };
+
+    this.router.params.subscribe(p => this.user = {
+      id: p.id,
+      name: p.name
+    });
+
   }
 
 }
