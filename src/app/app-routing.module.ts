@@ -9,15 +9,18 @@ import { UserComponent } from './users/user/user.component';
 import { UsersComponent } from './users/users.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { 
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
     path: 'users',
     component: UsersComponent,
     children: [
       { path: ':id/:name', component: UserComponent },
     ]
   },
-  { 
+  {
     path: 'servers',
     component: ServersComponent,
     children: [
