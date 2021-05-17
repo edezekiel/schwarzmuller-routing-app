@@ -1,11 +1,10 @@
 export class AuthService {
   loggedIn = false;
+
   isAuthenticated() {
     return new Promise((res, rej) => {
-      setTimeout(() => {
-        return this.loggedIn
-      }, 800);
-    })
+      setTimeout(() => res(this.loggedIn), 250);
+    });
   }
 
   login() {
